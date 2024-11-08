@@ -17,7 +17,7 @@
   <header class="jumbotron text-center" id="hero">
     <h1 class="display-4">High-Quality HVAC Parts Delivered</h1>
     <p class="lead">Keep your HVAC system running smoothly with the best parts and expert support.</p>
-    <a href="#products" class="btn btn-primary btn-lg">Shop Now</a>
+    <a href="index.html" class="btn btn-primary btn-lg">go back</a>
   </header>
 
   <!-- Product Grid Section -->
@@ -25,35 +25,97 @@
     <h2 class="text-center my-5">Featured HVAC Parts</h2>
     <div class="row">
       <!-- Product 1 -->
-      <div class="col-md-4 mb-4">
+      <div class="col-md-3 mb-4">
         <div class="card product-card">
           <img src="thermostat.jpg" class="card-img-top" alt="Thermostat">
           <div class="card-body text-center">
             <h5 class="card-title">Digital Programmable Thermostat</h5>
             <p class="card-text">A programmable thermostat to save energy and ensure your HVAC system runs efficiently. Ideal for any home or office setup.</p>
-            <a href="#" class="btn btn-dark btn-lg">Add to Cart</a>
+            <a href="#" class="btn btn-dark btn-lg" onclick="addToCart('Digital Programmable Thermostat', 99.99)">Add to Cart</a>
           </div>
         </div>
       </div>
+
       <!-- Product 2 -->
-      <div class="col-md-4 mb-4">
+      <div class="col-md-3 mb-4">
         <div class="card product-card">
           <img src="air-filter.jpg" class="card-img-top" alt="Air Filter">
           <div class="card-body text-center">
             <h5 class="card-title">MERV 8 Air Filter</h5>
             <p class="card-text">Ensure clean airflow and optimal performance with this MERV 8 air filter. Perfect for most HVAC systems.</p>
-            <a href="#" class="btn btn-dark btn-lg">Add to Cart</a>
+            <a href="#" class="btn btn-dark btn-lg" onclick="addToCart('MERV 8 Air Filter', 19.99)">Add to Cart</a>
           </div>
         </div>
       </div>
+
       <!-- Product 3 -->
-      <div class="col-md-4 mb-4">
+      <div class="col-md-3 mb-4">
         <div class="card product-card">
           <img src="fan-motor.jpg" class="card-img-top" alt="Condenser Fan Motor">
           <div class="card-body text-center">
             <h5 class="card-title">Condenser Fan Motor</h5>
             <p class="card-text">A high-performance motor designed to keep your HVAC system running smoothly and efficiently in all weather conditions.</p>
-            <a href="#" class="btn btn-dark btn-lg">Add to Cart</a>
+            <a href="#" class="btn btn-dark btn-lg" onclick="addToCart('Condenser Fan Motor', 149.99)">Add to Cart</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 4 -->
+      <div class="col-md-3 mb-4">
+        <div class="card product-card">
+          <img src="air-conditioner.jpg" class="card-img-top" alt="Air Conditioner">
+          <div class="card-body text-center">
+            <h5 class="card-title">High-Efficiency Air Conditioner</h5>
+            <p class="card-text">Keep your space cool with this energy-efficient air conditioner designed for all seasons.</p>
+            <a href="#" class="btn btn-dark btn-lg" onclick="addToCart('High-Efficiency Air Conditioner', 499.99)">Add to Cart</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 5 -->
+      <div class="col-md-3 mb-4">
+        <div class="card product-card">
+          <img src="heating-element.jpg" class="card-img-top" alt="Heating Element">
+          <div class="card-body text-center">
+            <h5 class="card-title">Heating Element</h5>
+            <p class="card-text">Replace your HVAC heating element with this high-performance part for optimal heating efficiency.</p>
+            <a href="#" class="btn btn-dark btn-lg" onclick="addToCart('Heating Element', 79.99)">Add to Cart</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 6 -->
+      <div class="col-md-3 mb-4">
+        <div class="card product-card">
+          <img src="duct-tape.jpg" class="card-img-top" alt="Duct Tape">
+          <div class="card-body text-center">
+            <h5 class="card-title">Heavy-Duty Duct Tape</h5>
+            <p class="card-text">Ideal for sealing ductwork, this heavy-duty duct tape ensures a tight seal in all conditions.</p>
+            <a href="#" class="btn btn-dark btn-lg" onclick="addToCart('Heavy-Duty Duct Tape', 6.99)">Add to Cart</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 7 -->
+      <div class="col-md-3 mb-4">
+        <div class="card product-card">
+          <img src="air-purifier.jpg" class="card-img-top" alt="Air Purifier">
+          <div class="card-body text-center">
+            <h5 class="card-title">Air Purifier Filter</h5>
+            <p class="card-text">Keep your air clean and your HVAC system running smoothly with this air purifier filter.</p>
+            <a href="#" class="btn btn-dark btn-lg" onclick="addToCart('Air Purifier Filter', 49.99)">Add to Cart</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 8 -->
+      <div class="col-md-3 mb-4">
+        <div class="card product-card">
+          <img src="hvac-insulation.jpg" class="card-img-top" alt="HVAC Insulation">
+          <div class="card-body text-center">
+            <h5 class="card-title">HVAC Insulation Kit</h5>
+            <p class="card-text">Ensure your HVAC system operates efficiently with this high-quality insulation kit for ducts and pipes.</p>
+            <a href="#" class="btn btn-dark btn-lg" onclick="addToCart('HVAC Insulation Kit', 89.99)">Add to Cart</a>
           </div>
         </div>
       </div>
@@ -65,5 +127,24 @@
     <p>&copy; 2024 Reliable HVAC Parts. All Rights Reserved.</p>
   </footer>
 
+  <script>
+    // Function to add items to the cart
+    function addToCart(productName, productPrice) {
+      let cart = JSON.parse(localStorage.getItem('cart')) || [];
+      
+      // Add the product to the cart
+      cart.push({ name: productName, price: productPrice });
+      
+      // Save the updated cart back to localStorage
+      localStorage.setItem('cart', JSON.stringify(cart));
+      
+      alert(productName + " has been added to your cart!");
+    }
+
+    // Hide loader after page loads
+    function hideLoader() {
+      document.getElementById('loader').style.display = 'none';
+    }
+  </script>
 </body>
 </html>
