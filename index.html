@@ -10,24 +10,42 @@
   <script src="script.js" defer></script>
 </head>
 <body onload="hideLoader()">
+
+  <!-- Fixed Navigation Bar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-white">
+    <a class="navbar-brand" href="#">Reliable HVAC Parts</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="shop.html">Shop</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+        <li class="nav-item"><a class="nav-link" href="shipping-returns.html">Shipping & Returns</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+</nav>
+
+
   <!-- Loader -->
   <div id="loader" class="loader"></div>
 
   <!-- Jumbotron -->
-  <div class="jumbotron text-center" style="height: 1000px;" id="intro">
-      <h1 class="display-4">Reliable HVAC Parts, Delivered Right to Your Doorstep</h1>
-      <div class="text-center" id="hero">
-        <img src="images/engineer.jpeg" style="width: 400px;" alt="Engineer">
-      </div>
-      <p class="lead" style="font-size: x-large; font-weight: bolder;margin-top: 100px; color: black;">
-        Your trusted source for quality HVAC components. With over 20 years of industry expertise, we provide customers with high-performance parts and maintenance supplies to keep their systems running efficiently. Whether you're a DIY enthusiast or a professional technician, we’re here to help you find exactly what you need.
-      </p>
-      <hr class="my-4">
-      <p style="color: black;">
-        With over 20 years of industry expertise, we provide customers with high-performance parts and maintenance supplies to keep their systems running efficiently.
-      </p>
-      <a class="btn btn-primary btn-lg" href="shop.html" role="button">Shop Now</a>
-      
+  <div class="jumbotron text-center" style="height: 1400px;" id="intro">
+    <h1 class="display-4">Reliable HVAC Parts, Delivered Right to Your Doorstep</h1>
+    <div class="text-center" id="hero">
+      <img src="images/engineer.jpeg" style="width: 300px;" alt="Engineer">
+    </div>
+    <p class="lead" style="font-size: x-large; font-weight: bolder;margin-top: 100px; color: black;">
+      Your trusted source for quality HVAC components. With over 20 years of industry expertise, we provide customers with high-performance parts and maintenance supplies to keep their systems running efficiently. Whether you're a DIY enthusiast or a professional technician, we’re here to help you find exactly what you need.
+    </p>
+    <hr class="my-4">
+    <p style="color: black;">
+      With over 20 years of industry expertise, we provide customers with high-performance parts and maintenance supplies to keep their systems running efficiently.
+    </p>
+    <a class="btn btn-primary btn-lg" href="shop.html" role="button">Shop Now</a>
   </div>
 
   <!-- Why Choose Us Section -->
@@ -79,14 +97,18 @@
     </div>
   </section>
         
-  <div class=" text-center" id="hero">
-
-       <a class="btn btn-secondary btn-lg" href="about.html" role="button">More Details About HVAC</a>
+  <div class="text-center" id="hero">
+    <a class="btn btn-secondary btn-lg" href="about.html" role="button">More Details About HVAC</a>
   </div>
+
   <!-- Footer -->
   <footer class="text-center py-4">
     <p>&copy; 2024 Reliable HVAC Parts. All Rights Reserved.</p>
   </footer>
+
+  <!-- Bootstrap JS and dependencies -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 </html>
