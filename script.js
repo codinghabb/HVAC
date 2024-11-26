@@ -16,7 +16,7 @@ function hideLoader() {
     // Save the updated cart back to localStorage
     localStorage.setItem('cart', JSON.stringify(cart));
   
-    alert(productName + " has been added to your cart!");
+   
     updateCartTotal();  // Update the cart total in the navbar or anywhere else
   }
   
