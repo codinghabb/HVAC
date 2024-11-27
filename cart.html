@@ -27,7 +27,8 @@
       color: red;
       font-size: 1.1rem;
     }
-    /* Style for the pop-up message */
+    
+    /* Pop-up styles */
     #popup-message {
       display: none;
       position: fixed;
@@ -35,7 +36,7 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background: rgba(0, 0, 0, 0.5);
+      background: rgba(0, 0, 0, 0.7);
       z-index: 9999;
       justify-content: center;
       align-items: center;
@@ -105,7 +106,7 @@
   <div id="popup-message">
     <div class="popup-content">
       <h4>Sorry, we can't accept orders right now.</h4>
-      <p>Please contact or mail us to complete your purchase.</p>
+      <p>Please <a href="mailto:support@reliablehvacparts.com">email us</a> to complete your purchase.</p>
       <button class="btn btn-danger" onclick="closePopup()">Close</button>
     </div>
   </div>
@@ -113,7 +114,7 @@
   <!-- Footer -->
   <footer class="text-center py-4">
     <section id="contact">
-      <p>Email us @ Support@reliablehvacparts.com</p>
+      <p>Email us @ <a href="mailto:support@reliablehvacparts.com">support@reliablehvacparts.com</a></p>
       <q>Available Monday - Friday from 09:00 AM to 5:00 PM EST</q>
     </section>
     <p>&copy; 2024 Reliable HVAC Parts. All Rights Reserved.</p>
